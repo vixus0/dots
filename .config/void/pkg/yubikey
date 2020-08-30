@@ -1,0 +1,6 @@
+gnupg2
+gnupg2-scdaemon
+libpcsclite
+u2f-hidraw-policy
+ykpers
+yubikey-manager
