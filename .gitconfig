@@ -1,0 +1,12 @@
+[user]
+	email = vixus0@gmail.com
+	name = Anshul Sirur
+
+[core]
+	editor = /usr/bin/nvim
+
+[commit]
+	verbose = true
+
+[push]
+	default = current
