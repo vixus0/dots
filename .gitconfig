@@ -1,6 +1,10 @@
 [user]
 	email = vixus0@gmail.com
 	name = Anshul Sirur
+  signingkey = AD865C9E40DEEFD6AF4664C4095C159E4D454E7A
+
+[gpg]
+  program = /bin/gpg2
 
 [core]
 	editor = /usr/bin/nvim
@@ -10,3 +14,9 @@
 
 [push]
 	default = current
+
+[pull]
+	ff = only
+
+[init]
+  defaultBranch = main
