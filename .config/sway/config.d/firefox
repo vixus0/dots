@@ -1,1 +1,2 @@
 for_window [app_id="firefox"] border none
+for_window [title="Firefox - Sharing Indicator"] floating enable, sticky enable, move up 3000 px
