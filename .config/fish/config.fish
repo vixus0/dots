@@ -8,7 +8,7 @@ command -v sway >/dev/null 2>&1
 and if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 1
   set -x WLR_DRM_DEVICES /dev/dri/card0
   set -x XKB_DEFAULT_LAYOUT gb
-  exec sway
+  exec dbus-run-session sway
 end
 
 # use vim keybindings
@@ -21,3 +21,7 @@ set fish_greeting
 set -x GPG_TTY (tty)
 set -x SSH_AUTH_SOCK (gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+
+# direnv
+command -v direnv >/dev/null 2>&1
+and eval (direnv hook fish)
