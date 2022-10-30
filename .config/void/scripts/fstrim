@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+#
+# Setup regular fstrim for SSD
+# https://docs.voidlinux.org/config/ssd.html
+#
+
+set -o errexit
+
+script="/etc/cron.daily/fstrim"
+info="$(lsblk --discard --nodeps --noheading /dev/nvme0n1 | awk '{print $3, $4}')"
+
+if test "$info" != "0 0"; then
+echo "writing $script"
+cat <<EOF > "$script"
+#!/bin/sh
+
+fstrim /
+EOF
+
+chmod u+x "$script"
+fi
